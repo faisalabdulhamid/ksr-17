@@ -4,11 +4,12 @@ namespace App\Models;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use App\Models\Utilities\InterfaceModel;
+use App\Models\Utilities\ModelHepler;
 
-class User extends Authenticatable
+class User extends Authenticatable implements InterfaceModel
 {
-    use Notifiable;
-
+    use Notifiable, ModelHepler;
     /**
      * The attributes that are mass assignable.
      *
